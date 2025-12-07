@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+  <div class="p-10  bg-transparent ">
+
+ <form (submit)="$event.preventDefault(); enviarFormulario()">
+  <input
+    type="text"
+    class="form-control mt-2"
+    placeholder="Nombre"
+    [value]="nombre()"
+    (input)="nombre.set(txtNombre.value)"
+    #txtNombre
+  />
+  
+  <input
+    type="text"
+    class="form-control mt-2"
+    placeholder="Apellido"
+    [value]="apellido()"
+    (input)="apellido.set(txtApellido.value)"
+    #txtApellido
+  />
+  
+  <input
+    type="text"
+    class="form-control mt-2"
+    placeholder="Número de teléfono"
+    [value]="numero_telefono()"
+    (input)="numero_telefono.set(txtTelefono.value)"
+    #txtTelefono
+  />
+  
+  <input
+    type="email"
+    class="form-control mt-2"
+    placeholder="Correo electrónico"
+    [value]="email()"
+    (input)="email.set(txtEmail.value)"
+    #txtEmail
+  />
+  
+  <input
+    type="text"
+    class="form-control mt-2"
+    placeholder="Asunto"
+    [value]="asunto()"
+    (input)="asunto.set(txtAsunto.value)"
+    #txtAsunto
+  />
+  
+  <textarea
+    class="form-control mt-2"
+    placeholder="Mensaje"
+    [value]="mensaje()"
+    (input)="mensaje.set(txtMensaje.value)"
+    #txtMensaje
+  ></textarea>
+  
+<button 
+    type="submit" 
+    class="mt-3 bg-transparent border border-white px-4 py-2 text-white hover:bg-white hover:text-[#2C3142] transition duration-300"
+>
+    Enviar
+</button>
+
+</form>
+
+  </div>
+    
+    
+
+</html>

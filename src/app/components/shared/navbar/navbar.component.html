@@ -1,0 +1,121 @@
+<nav class="bg-transparent w-full">
+
+  <div class="flex items-center justify-between px-6 sm:px-10 py-6">
+
+    <!-- LOGO -->
+    <div class="text-white font-bold text-3xl tracking-wide drop-shadow-lg">
+      Luis Molina
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <div class="hidden sm:flex justify-between gap-12 text-white text-2xl font-light">
+
+      <a routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         class="text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        Home
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+      <a routerLink="/about-me"
+         routerLinkActive="active"
+         class=" text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        About me
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+      <a routerLink="/projects"
+         routerLinkActive="active"
+         class=" text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        Projects
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+      <a routerLink="/cv"
+         routerLinkActive="active"
+         class="text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        Curriculum Vitae
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+      <a routerLink="/contact"
+         routerLinkActive="active"
+         class="text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        Contact me
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA ANIMADO -->
+    <button 
+      class="sm:hidden flex flex-col justify-center gap-[6px] w-10 h-10 group" 
+      type="button" 
+      (click)="toggleMenu()">
+
+      <span class="block h-[3px] bg-white rounded transition-all duration-300"
+            [class.rotate-45]="menuOpen"
+            [class.translate-y-[8px]]="menuOpen"></span>
+
+      <span class="block h-[3px] bg-white rounded transition-all duration-300"
+            [class.opacity-0]="menuOpen"></span>
+
+      <span class="block h-[3px] bg-white rounded transition-all duration-300"
+            [class.-rotate-45]="menuOpen"
+            [class.-translate-y-[8px]]="menuOpen"></span>
+
+    </button>
+
+  </div>
+
+  <!-- MENU MÓVIL -->
+  @if (menuOpen) {
+    <div class="sm:hidden flex flex-col items-center gap-4 pb-6 
+                text-white text-2xl font-light animate-fadeIn">
+
+      <a routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="closeMenu()"
+         class="hover:text-blue-300 transition">
+        Home
+      </a>
+
+      <a routerLink="/about-me"
+         routerLinkActive="active"
+         (click)="closeMenu()"
+         class="hover:text-blue-300 transition">
+        About me
+      </a>
+
+      <a routerLink="/projects"
+         routerLinkActive="active"
+         (click)="closeMenu()"
+         class="hover:text-blue-300 transition">
+        Projects
+      </a>
+
+      <a routerLink="/cv"
+         routerLinkActive="active"
+         (click)="closeMenu()"
+         class="hover:text-blue-300 transition">
+        Curriculum Vitae
+      </a>
+
+      <a routerLink="/contact"
+         routerLinkActive="active"
+         (click)="closeMenu()"
+         class="hover:text-blue-300 transition">
+        Contact me
+      </a>
+
+    </div>
+  }
+
+</nav>
+
+<!-- LÍNEA DIVISORIA -->
+<div class="px-6 -mt-4 mb-5">
+  <hr class="h-[2px] bg-white/60 border-none" />
+</div>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+
+  
+
+
+<!-- HERO RESPONSIVE -->
+<section class="w-full bg-transparent mb-20">
+  <div class="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 py-6 lg:py-10 gap-10 w-full">
+
+    <!-- LEFT TEXT BLOCK -->
+   <div class="p-6 sm:p-10 lg:p-14 max-w-2xl text-center lg:text-left 
+             rounded-2xl 
+             space-y-5">
+
+    <p class="text-4xl sm:text-5xl font-bold text-white drop-shadow-lg">
+        Hi!
+    </p>
+
+    <p class="text-4xl sm:text-5xl font-bold text-white drop-shadow-lg">
+        My name is <span class="text-blue-300">Luis Molina</span>
+    </p>
+
+    <p class="text-2xl sm:text-3xl text-gray-200 font-light leading-snug">
+        Mathematician • Software Developer
+    </p>
+
+    <p class="text-2xl sm:text-3xl text-gray-200 font-light leading-snug">
+        Web Scraping • Data Science
+    </p>
+
+    <a href="#contact">
+        <button class="mt-3 px-6 py-2 text-xl sm:text-2xl font-semibold text-white
+             hover:text-blue-300 hover:scale-105 transition-all duration-300">
+            Contact me here!
+        </button>
+    </a>
+</div>
+
+
+
+    <!-- CENTER IMAGE -->
+  <div class="relative flex items-center justify-center w-full lg:w-auto">
+  <img 
+    src="/me-photo.png" 
+    alt="Luis photo" 
+    class="w-48 sm:w-72 md:w-96 lg:w-[480px] object-cover z-10 drop-shadow-[0_10px_25px_rgba(0,0,0,0.45)]"
+  />
+
+  <!-- Glow suave detrás -->
+  <div class="absolute inset-0 w-full h-full blur-3xl bg-blue-500/20 rounded-full"></div>
+</div>
+
+
+
+    <!-- RIGHT TEXT BLOCK -->
+<div class="relative px-4 sm:px-6 lg:px-10 py-4 lg:py-10 text-white max-w-xl">
+
+  <!-- SIMBOLO DE FONDO -->
+  <img
+    src="/simbol_inicio.png"
+    alt="symbol"
+    class="
+      pointer-events-none absolute opacity-40
+
+      /* Móvil */
+      left-1/2 -translate-x-1/2 top-64 w-52
+
+      /* Tablet pequeña */
+      sm:top-40 sm:w-60
+
+      /* Tablet vertical */
+      md:top-32 md:left-auto md:right-0 md:translate-x-0 md:w-72
+
+      /* Desktop pequeño */
+      lg:top-10 lg:right-10 lg:w-80
+
+      /* Desktop normal */
+      xl:top-0 xl:right-20 xl:w-96
+
+      /* Desktop grande */
+      2xl:right-32 2xl:w-[420px]
+    "
+  />
+
+  <!-- TEXTO ENCIMA DEL SIMBOLO -->
+<div class="relative z-10 text-left space-y-3 sm:space-y-4">
+
+  <p class="text-3xl sm:text-4xl font-semibold text-white drop-shadow-lg hover:text-blue-300 transition">
+    Troubleshooting
+  </p>
+
+  <p class="text-3xl sm:text-4xl font-semibold text-white drop-shadow-lg hover:text-blue-300 transition">
+    Design
+  </p>
+
+  <p class="text-3xl sm:text-4xl font-semibold text-white drop-shadow-lg hover:text-blue-300 transition">
+    FullStack
+  </p>
+
+  <p class="text-3xl sm:text-4xl font-semibold text-white drop-shadow-lg hover:text-blue-300 transition">
+    Applied Data Science
+  </p>
+
+  <p class="text-xl sm:text-2xl text-gray-200 mt-6 leading-relaxed drop-shadow-md">
+    Do you want to know more about me?<br />
+    Click the button below
+  </p>
+
+  <a href="#about">
+    <button
+      class="mt-3 px-6 py-2 text-xl sm:text-2xl font-semibold text-white
+             hover:text-blue-300 hover:scale-105 transition-all duration-300"
+    >
+      About me
+    </button>
+  </a>
+
+</div>
+
+
+</div>
+
+
+  </div>
+</section>
+
+
+<!-- FRAMEWORKS DEV -->
+
+<section class="w-full 
+                bg-[#2C3142] 
+                bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
+                bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
+                shadow-inner 
+                py-20 
+                mb-20">
+
+
+  <div class="flex items-center gap-16 px-10">
+
+    <!-- ICONO GRANDE + TEXTO (MANTIENE EL TAMAÑO EXACTO DEL SCREENSHOT) -->
+    <div class="relative flex-none w-[420px]">
+
+      <!-- LOGO GRANDE -->
+      <img src="./framework-logo.png"
+           class="w-full opacity-30 drop-shadow-xl select-none" />
+
+      <!-- TEXTO ENCIMA -->
+      <p class="absolute inset-0 flex items-center justify-center 
+                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
+                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
+        Dev Frameworks
+      </p>
+
+    </div>
+
+    <!-- GRID DE FRAMEWORKS PREMIUM -->
+    <div class="flex-1">
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
+
+        @for (framework of dev_frameworks_list(); track framework.id) {
+          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+            <img 
+              [src]="framework.img"
+              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+            />
+          </div>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="w-full 
+                bg-[#2C3142] 
+                bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
+                bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
+                shadow-inner 
+                py-20 
+                mb-20">
+
+
+  <div class="flex items-center gap-16 px-10">
+
+    <!-- ICONO GRANDE + TEXTO -->
+    <div class="relative flex-none w-[420px] ml-20">
+
+      <!-- LOGO GRANDE -->
+      <img src="./rueda_dentada.png"
+           class="w-full opacity-30 drop-shadow-xl select-none" />
+
+      <!-- TEXTO -->
+      <p class="absolute inset-0 flex items-center justify-center 
+                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
+                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
+        Dev Tools
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="flex-1">
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
+
+        @for (framework of tools_list(); track framework.id) {
+          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+            <img 
+              [src]="framework.img"
+              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+            />
+          </div>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="w-full 
+                bg-[#2C3142] 
+                bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
+                bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
+                shadow-inner 
+                py-20 
+                mb-20">
+
+  <div class="flex items-center gap-16 px-10">
+
+    <!-- ICONO GRANDE + TEXTO -->
+    <div class="relative flex-none w-[420px] ml-40">
+
+      <!-- LOGO GRANDE -->
+      <img src="./data-science.svg"
+           class="w-full opacity-30 drop-shadow-xl select-none" />
+
+      <!-- TEXTO -->
+      <p class="absolute inset-0 flex items-center justify-center text-center
+                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
+                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
+        Data Science<br/>Tools
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+    <div class="flex-1">
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
+
+        @for (framework of data_science_list(); track framework.id) {
+          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+            <img 
+              [src]="framework.img"
+              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+            />
+          </div>
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+</html>
