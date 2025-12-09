@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const { to, subject, message } = req.body;
 
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend("re_Sj5SGbB9_P5U7qYdjxTeH7ZpS15Ji8gSs");
 
     const data = await resend.emails.send({
       from: "Mi App <onboarding@resend.dev>",
