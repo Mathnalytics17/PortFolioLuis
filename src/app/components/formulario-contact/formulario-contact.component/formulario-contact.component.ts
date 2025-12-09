@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { FormInterface } from '../../../interfaces/form-interface';
+import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'formulario-contact',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule], // 👉 NECESARIO PARA QUE EL FORM SE RENDERICE
   templateUrl: './formulario-contact.component.html',
 })
-export class FormularioContactComponentComponent {
-  
+export class FormularioContactComponent {
+
   nombre = signal('');
   apellido = signal('');
   email = signal('');
@@ -15,28 +17,35 @@ export class FormularioContactComponentComponent {
   asunto = signal('');
   mensaje = signal('');
 
-  formularioSubmit = signal<FormInterface[]>([]);
+  status = signal('');
+
+  constructor(private http: HttpClient) {}
 
   enviarFormulario() {
-    // Crear objeto con los datos del formulario
-    const datosFormulario = {
-      nombre: this.nombre(),
-      apellido: this.apellido(),
-      email: this.email(),
-      numero_telefono: this.numero_telefono(),
-      asunto: this.asunto(),
-      mensaje: this.mensaje()
+    this.status.set('Enviando...');
+
+    const payload = {
+      to: "luisjose0317@gmail.com",  // ⚠️ Esto debes ponerlo tú, no enviar al usuario
+      subject: this.asunto(),
+      message: `
+        Nombre: ${this.nombre()}
+        Apellido: ${this.apellido()}
+        Teléfono: ${this.numero_telefono()}
+        Email: ${this.email()}
+        Mensaje: ${this.mensaje()}
+      `
     };
 
-    // Console.log para verificar los datos
-    console.log('Datos del formulario:', datosFormulario);
-
-    // Aquí puedes agregar la lógica para enviar los datos
-    // Por ejemplo, agregar al array formularioSubmit
-    this.formularioSubmit.update(form => [...form, datosFormulario]);
-    
-    // Limpiar formulario después de enviar
-    this.limpiarFormulario();
+    this.http.post('/api/send-email', payload).subscribe({
+      next: () => {
+        this.status.set('Correo enviado correctamente 🎉');
+        this.limpiarFormulario();
+      },
+      error: (err) => {
+        console.error(err);
+        this.status.set('Hubo un error al enviar el correo ❌');
+      }
+    });
   }
 
   limpiarFormulario() {

@@ -1,11 +1,11 @@
 import {Component} from '@angular/core'
-import { FormularioContactComponentComponent } from '../../components/formulario-contact/formulario-contact.component/formulario-contact.component';
+import { FormularioContactComponent } from '../../components/formulario-contact/formulario-contact.component/formulario-contact.component';
 
 
 @Component({
 
     templateUrl:'./contact.component.html',
-    imports:[FormularioContactComponentComponent]
+    imports:[FormularioContactComponent]
     
 })
 export class ContactComponent{

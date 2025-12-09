@@ -1,0 +1,25 @@
+<form (submit)="send()" [formGroup]="form">
+
+  <input
+    type="email"
+    placeholder="Destinatario"
+    formControlName="to"
+  />
+
+  <input
+    type="text"
+    placeholder="Asunto"
+    formControlName="subject"
+  />
+
+  <textarea
+    placeholder="Mensaje"
+    formControlName="message"
+  ></textarea>
+
+  <button type="submit" [disabled]="form.invalid">
+    Enviar
+  </button>
+</form>
+
+<p>{{ status }}</p>
