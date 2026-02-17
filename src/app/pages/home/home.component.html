@@ -133,151 +133,128 @@
 
 
 <!-- FRAMEWORKS DEV -->
-
-<section class="w-full 
-                bg-[#2C3142] 
+<section class="w-full
+                bg-[#2C3142]
                 bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
                 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
-                shadow-inner 
-                py-20 
-                mb-20">
+                shadow-inner
+                py-14 sm:py-20
+                mb-16 sm:mb-20">
 
+  <!-- Contenedor responsive -->
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
 
-  <div class="flex items-center gap-16 px-10">
+      <!-- Ícono + texto -->
+      <div class="relative flex-none w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px]">
+        <img src="./framework-logo.png"
+             class="w-full opacity-30 drop-shadow-xl select-none" />
 
-    <!-- ICONO GRANDE + TEXTO (MANTIENE EL TAMAÑO EXACTO DEL SCREENSHOT) -->
-    <div class="relative flex-none w-[420px]">
+        <p class="absolute inset-0 flex items-center justify-center
+                  text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-wide
+                  drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none text-center">
+          Dev Frameworks
+        </p>
+      </div>
 
-      <!-- LOGO GRANDE -->
-      <img src="./framework-logo.png"
-           class="w-full opacity-30 drop-shadow-xl select-none" />
-
-      <!-- TEXTO ENCIMA -->
-      <p class="absolute inset-0 flex items-center justify-center 
-                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
-                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
-        Dev Frameworks
-      </p>
-
-    </div>
-
-    <!-- GRID DE FRAMEWORKS PREMIUM -->
-    <div class="flex-1">
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
-
-        @for (framework of dev_frameworks_list(); track framework.id) {
-          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
-            <img 
-              [src]="framework.img"
-              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
-            />
-          </div>
-        }
-
+      <!-- Grid -->
+      <div class="w-full">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-14 place-items-center">
+          @for (framework of dev_frameworks_list(); track framework.id) {
+            <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+              <img
+                [src]="framework.img"
+                class="w-20 sm:w-24 lg:w-36 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+              />
+            </div>
+          }
+        </div>
       </div>
 
     </div>
-
   </div>
+</section>
 
+
+<!-- DEV TOOLS -->
+<section class="w-full
+                bg-[#2C3142]
+                bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
+                bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
+                shadow-inner
+                py-14 sm:py-20
+                mb-16 sm:mb-20">
+
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
+
+      <div class="relative flex-none w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px]">
+        <img src="./rueda_dentada.png"
+             class="w-full opacity-30 drop-shadow-xl select-none" />
+
+        <p class="absolute inset-0 flex items-center justify-center
+                  text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-wide
+                  drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none text-center">
+          Dev Tools
+        </p>
+      </div>
+
+      <div class="w-full">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-14 place-items-center">
+          @for (framework of tools_list(); track framework.id) {
+            <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+              <img
+                [src]="framework.img"
+                class="w-20 sm:w-24 lg:w-36 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+              />
+            </div>
+          }
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 
-
-<section class="w-full 
-                bg-[#2C3142] 
+<!-- DATA SCIENCE TOOLS -->
+<section class="w-full
+                bg-[#2C3142]
                 bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
                 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
-                shadow-inner 
-                py-20 
-                mb-20">
+                shadow-inner
+                py-14 sm:py-20
+                mb-16 sm:mb-20">
 
+  <div class="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-10">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
 
-  <div class="flex items-center gap-16 px-10">
+      <div class="relative flex-none w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px]">
+        <img src="./data-science.svg"
+             class="w-full opacity-30 drop-shadow-xl select-none" />
 
-    <!-- ICONO GRANDE + TEXTO -->
-    <div class="relative flex-none w-[420px] ml-20">
+        <p class="absolute inset-0 flex items-center justify-center text-center
+                  text-white text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-wide
+                  drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
+          Data Science<br/>Tools
+        </p>
+      </div>
 
-      <!-- LOGO GRANDE -->
-      <img src="./rueda_dentada.png"
-           class="w-full opacity-30 drop-shadow-xl select-none" />
-
-      <!-- TEXTO -->
-      <p class="absolute inset-0 flex items-center justify-center 
-                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
-                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
-        Dev Tools
-      </p>
-
-    </div>
-
-    <!-- GRID -->
-    <div class="flex-1">
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
-
-        @for (framework of tools_list(); track framework.id) {
-          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
-            <img 
-              [src]="framework.img"
-              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
-            />
-          </div>
-        }
-
+      <div class="w-full">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12 lg:gap-14 place-items-center">
+          @for (framework of data_science_list(); track framework.id) {
+            <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
+              <img
+                [src]="framework.img"
+                class="w-20 sm:w-24 lg:w-36 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
+              />
+            </div>
+          }
+        </div>
       </div>
 
     </div>
-
   </div>
-</section>
-<section class="w-full 
-                bg-[#2C3142] 
-                bg-gradient-to-b from-[#2C3142] via-[#262B36] to-[#2C3142]
-                bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_70%)]
-                shadow-inner 
-                py-20 
-                mb-20">
-
-  <div class="flex items-center gap-16 px-10">
-
-    <!-- ICONO GRANDE + TEXTO -->
-    <div class="relative flex-none w-[420px] ml-40">
-
-      <!-- LOGO GRANDE -->
-      <img src="./data-science.svg"
-           class="w-full opacity-30 drop-shadow-xl select-none" />
-
-      <!-- TEXTO -->
-      <p class="absolute inset-0 flex items-center justify-center text-center
-                text-white text-3xl sm:text-4xl font-extrabold tracking-wide 
-                drop-shadow-[0_6px_14px_rgba(0,0,0,0.7)] pointer-events-none">
-        Data Science<br/>Tools
-      </p>
-
-    </div>
-
-    <!-- GRID -->
-    <div class="flex-1">
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-14 place-items-center">
-
-        @for (framework of data_science_list(); track framework.id) {
-          <div class="transition-all duration-300 hover:scale-110 hover:brightness-110">
-            <img 
-              [src]="framework.img"
-              class="w-24 sm:w-28 lg:w-40 drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)]"
-            />
-          </div>
-        }
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
 
