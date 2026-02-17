@@ -1,0 +1,54 @@
+<div class="min-h-screen px-6 py-14 bg-gradient-to-b from-[#0C1A27] to-[#10202F] text-white">
+
+    <div class="mb-10">
+<h1 class="text-3xl lg:text-4xl font-bold text-center mb-12 animate-fade-in">
+    Mis Clientes
+  </h1>
+    </div>
+  
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    @for (client of clients(); track client.id) {
+
+      <div
+        class="group relative bg-white/10 backdrop-blur-xl border border-white/10
+               rounded-3xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 
+               transition-all duration-500 animate-card">
+
+        <!-- Imagen -->
+        <div class="w-full h-40 overflow-hidden rounded-2xl mb-5">
+          <img [src]="client.img" [alt]="client.name"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+
+        <!-- Nombre del cliente -->
+        <h2 class="text-2xl font-bold mb-2">
+          {{ client.name }}
+        </h2>
+
+        <!-- Contacto -->
+        <p class="text-sm text-gray-300 mb-4">
+          Contacto: <span class="font-semibold">{{ client.contact }}</span>
+        </p>
+
+        <!-- Descripción -->
+        <p class="text-gray-300 mb-6">
+          {{ client.description }}
+        </p>
+
+        <!-- Testimonio -->
+        <blockquote
+          class="italic text-gray-200 border-l-4 border-blue-400 pl-4 py-2 bg-white/5 rounded-lg">
+          {{ client.testimonial }}
+        </blockquote>
+
+        <!-- Sutil highlight -->
+        <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      </div>
+
+    }
+
+  </div>
+</div>

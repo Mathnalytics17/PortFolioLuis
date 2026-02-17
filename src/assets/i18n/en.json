@@ -1,0 +1,44 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About me",
+    "PROJECTS": "Projects",
+    "CLIENTS": "Clients",
+    "CV": "Curriculum Vitae",
+    "CONTACT": "Contact"
+  },
+  "COMMON": {
+    "VIEW_MORE": "View more"
+  },
+  "PROJECTS": {
+    "FILTER_TITLE": "Advanced filter",
+    "NAME_LABEL": "Name",
+    "NAME_PLACEHOLDER": "Search by name",
+    "DATE_LABEL": "Date",
+    "DATE_FROM": "From",
+    "DATE_TO": "To",
+    "CATEGORIES": "Categories",
+    "CLEAR": "Clear filters",
+    "NO_RESULTS": "No projects match the current filter.",
+    "CREATED_AT": "Created at",
+    "CLIENT": "Client",
+    "DURATION": "Duration",
+    "TEAM": "Team",
+    "OBJECTIVE": "Objective",
+    "RESULT": "Result",
+    "TECHNOLOGIES": "Technologies"
+  },
+  "FOOTER": {
+    "ROLE": "Full Stack Developer",
+    "CONTACT_TITLE": "Contact information",
+    "LETS_TALK_TITLE": "Let’s Talk",
+    "LETS_TALK_DESC": "Have a project in mind? Let’s talk about how I can help.",
+    "CTA": "Contact now",
+    "RIGHTS": "All rights reserved.",
+    "NAV_HOME": "Home",
+    "NAV_ABOUT": "About me",
+    "NAV_PROJECTS": "Projects",
+    "NAV_CV": "CV",
+    "NAV_CONTACT": "Contact"
+  }
+}

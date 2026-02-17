@@ -21,14 +21,21 @@
       <a routerLink="/about-me"
          routerLinkActive="active"
          class=" text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
-        About me
+        Sobre mi
         <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
       </a>
 
       <a routerLink="/projects"
          routerLinkActive="active"
          class=" text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
-        Projects
+        Proyectos
+        <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
+      </a>
+
+       <a routerLink="/clients"
+         routerLinkActive="active"
+         class="text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
+        Clientes
         <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
       </a>
 
@@ -42,7 +49,7 @@
       <a routerLink="/contact"
          routerLinkActive="active"
          class="text-white !no-underline hover:!no-underline relative group no-underline hover:no-underline">
-        Contact me
+        Contactame
         <span class="absolute left-0 -bottom-1 h-[3px] bg-white transition-all duration-300 w-0 group-hover:w-full"></span>
       </a>
 
@@ -86,14 +93,14 @@
          routerLinkActive="active"
          (click)="closeMenu()"
          class="hover:text-blue-300 transition">
-        About me
+        Sobre mi
       </a>
 
       <a routerLink="/projects"
          routerLinkActive="active"
          (click)="closeMenu()"
          class="hover:text-blue-300 transition">
-        Projects
+        Proyectos
       </a>
 
       <a routerLink="/cv"

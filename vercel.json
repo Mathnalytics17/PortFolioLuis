@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/assets/(.*)", "destination": "/assets/$1" },
+    { "source": "/(.*)\\.pdf", "destination": "/$1.pdf" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

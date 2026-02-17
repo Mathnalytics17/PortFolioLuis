@@ -1,0 +1,44 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre mí",
+    "PROJECTS": "Proyectos",
+    "CLIENTS": "Clientes",
+    "CV": "Currículum",
+    "CONTACT": "Contacto"
+  },
+  "COMMON": {
+    "VIEW_MORE": "Ver más"
+  },
+  "PROJECTS": {
+    "FILTER_TITLE": "Filtro avanzado",
+    "NAME_LABEL": "Nombre",
+    "NAME_PLACEHOLDER": "Buscar por nombre",
+    "DATE_LABEL": "Fecha",
+    "DATE_FROM": "Desde",
+    "DATE_TO": "Hasta",
+    "CATEGORIES": "Categorías",
+    "CLEAR": "Limpiar filtros",
+    "NO_RESULTS": "No hay proyectos que coincidan con el filtro.",
+    "CREATED_AT": "Fecha de creación",
+    "CLIENT": "Cliente",
+    "DURATION": "Duración",
+    "TEAM": "Equipo",
+    "OBJECTIVE": "Objetivo",
+    "RESULT": "Resultado",
+    "TECHNOLOGIES": "Tecnologías"
+  },
+  "FOOTER": {
+    "ROLE": "Desarrollador Full Stack",
+    "CONTACT_TITLE": "Información de contacto",
+    "LETS_TALK_TITLE": "Hablemos",
+    "LETS_TALK_DESC": "¿Tienes un proyecto en mente? Conversemos sobre cómo puedo ayudarte.",
+    "CTA": "Contacta ahora",
+    "RIGHTS": "Todos los derechos reservados.",
+    "NAV_HOME": "Inicio",
+    "NAV_ABOUT": "Sobre mí",
+    "NAV_PROJECTS": "Proyectos",
+    "NAV_CV": "Currículum",
+    "NAV_CONTACT": "Contacto"
+  }
+}

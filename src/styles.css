@@ -1,1 +1,298 @@
 @import "tailwindcss";
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.7s ease-out forwards;
+}
+
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-card {
+  animation: card-rise 0.8s ease-out forwards;
+}
+.pdf-clean * {
+  color: black !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  border-color: #000 !important;
+}
+
+
+.cv-container {
+    font-family: "Times New Roman", serif;
+    color: #000;
+    background: #fff;
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 4px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cv-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.cv-date {
+    font-size: 14px;
+    color: #444;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 4px;
+}
+
+.cv-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+/* Ocultar todo excepto el contenido del CV */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  main.cv-container, 
+  main.cv-container * {
+    visibility: visible !important;
+  }
+
+  main.cv-container {
+    position: absolute;
+    inset: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Evitar que Angular agregue márgenes por default */
+  @page {
+    margin: 1in;
+  }
+}
+/* CONTENEDOR DE LA PÁGINA (tu web) */
+.cv-page {
+  background: transparent;
+  padding-bottom: 48px;
+}
+
+/* TOP BAR (título + botón) */
+.cv-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px 20px;
+  gap: 16px;
+}
+
+.cv-topbar-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cv-btn {
+  background: #2c3142;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+.cv-btn:hover { background: #1f2533; }
+
+/* =========================
+   DOCUMENTO (como el PDF)
+   ========================= */
+.cv-sheet {
+  width: 8.5in;               /* carta */
+  min-height: 11in;
+  margin: 0 auto;
+  background: #fff;
+  color: #000;
+  padding: 0.65in 0.75in;     /* márgenes tipo Word */
+  box-sizing: border-box;
+
+  /* Tipografía estilo Word */
+  font-family: Calibri, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 1.35;
+
+  border-radius: 10px;
+}
+
+/* HEADER CENTRADO */
+.cv-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.cv-name {
+  font-size: 16pt;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.cv-contact {
+  margin: 0;
+  font-size: 11pt;
+}
+
+.cv-role { font-weight: 400; }
+.cv-sep { margin: 0 6px; }
+
+.cv-link {
+  color: #1f6feb; /* azul link */
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+/* SECCIONES */
+.cv-section {
+  margin-top: 22px;
+}
+
+.cv-section-title {
+  text-align: center;
+  font-size: 12.5pt;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cv-left-title {
+  text-align: left; /* “Proyectos destacados” va alineado a la izquierda en el PDF */
+}
+
+.cv-divider {
+  border-top: 2px solid #000;
+  margin: 8px 0 12px;
+}
+
+/* FILAS CON FECHA A LA DERECHA */
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.cv-row-tight { margin-top: -4px; }
+
+.cv-left { flex: 1; }
+.cv-right { min-width: 160px; text-align: right; }
+
+.cv-strong { font-weight: 700; }
+
+/* PÁRRAFOS */
+.cv-paragraph {
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+/* SKILLS 3 COLUMNAS */
+.cv-skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  font-size: 11.5pt;
+}
+
+.cv-skill-col {
+  text-align: left;
+}
+
+/* BULLETS */
+.cv-bullets {
+  margin: 8px 0 0 22px;
+}
+
+.cv-bullets li {
+  margin: 10px 0;
+}
+
+.cv-bullets-wide {
+  margin-left: 28px;
+}
+
+/* BLOQUES DE EXPERIENCIA */
+.cv-exp-block {
+  margin-top: 18px;
+}
+
+/* IDIOMAS (dos columnas separadas) */
+.cv-langs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 12pt;
+}
+
+/* SALTO DE PÁGINA EN IMPRESIÓN */
+.cv-pagebreak {
+  page-break-before: always;
+}
+
+/* =========================
+   PRINT: idéntico al PDF
+   ========================= */
+@media print {
+  body { margin: 0; }
+  .cv-topbar { display: none !important; } /* no imprimir el botón */
+  .cv-sheet {
+    width: 8.5in;
+    min-height: 11in;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.65in 0.75in;
+  }
+}

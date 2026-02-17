@@ -32,7 +32,7 @@ dev_frameworks_list = signal<ToolList[]>([
 
 
 tools_list = signal<ToolList[]>([
-  { id: 1, nombre: 'Nginx', img: './nginx.jpg' },
+  { id: 1, nombre: 'Nginx', img: './nginx.png' },
   { id: 2, nombre: 'Gunicorn', img: './gunicorn-logo-png-transparent.png' },
   { id: 3, nombre: 'Docker', img: './docker_mark-logo_brandlogos.net_yetav.png' },
   { id: 4, nombre: 'Uvicorn', img: './uvicorn.png' },

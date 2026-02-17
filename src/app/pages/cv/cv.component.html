@@ -1,180 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harvard Style Resume</title>
+<div class="cv-page">
+  <!-- Barra superior (tu título + botón) -->
+  <div class="cv-topbar">
+    <h1 class="cv-topbar-title">Curriculum Vitae</h1>
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body class="bg-transparent">
-    <div>
-
-        <div class="flex flex-row justify-between p-10">
-<h1 class="text-white ml-10">
-        Curriculum Vitae 
-    </h1>
-
-   <div class="flex justify-center mr-20">
-    <button class="bg-[#2C3142] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#1f2533] transition-all duration-200 rounded">
-        <span class="text-base sm:text-lg font-semibold tracking-wide">
-            Descargar PDF
-        </span>
+    <button (click)="printCV()" class="cv-btn">
+      Descargar PDF
     </button>
-</div>
+  </div>
 
+  <!-- Documento CV -->
+  <main #cvContent class="cv-sheet">
+    <!-- Header centrado -->
+    <header class="cv-header">
+      <h1 class="cv-name">Luis José Molina Truyot</h1>
+
+      <p class="cv-contact">
+        <span class="cv-role">Full Stack Developer</span>
+        <span class="cv-sep">|</span>
+        <span>luisjose0317&#64;gmail.com</span>
+        <span class="cv-sep">|</span>
+        <span>+57 3012892924</span>
+        <span class="cv-sep">|</span>
+        <span>Portfolio:</span>
+        <a class="cv-link" href="https://port-folio-luis.vercel.app/" target="_blank" rel="noreferrer">
+          https://port-folio-luis.vercel.app/
+        </a>
+        <span class="cv-sep">|</span>
+        <span>LinkedIn:</span>
+        <a class="cv-link" href="https://www.linkedin.com/in/luis-molina-truyot-a517691aa/" target="_blank" rel="noreferrer">
+          https://www.linkedin.com/in/luis-molina-truyot-a517691aa/
+        </a>
+      </p>
+    </header>
+
+    <!-- Educación -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Educación</h2>
+  
+
+      <div class="cv-row">
+        <div class="cv-left">
+          <div class="cv-strong">Universidad de Antioquia</div>
+          <div>Pregrado en Matemáticas</div>
+        </div>
+        <div class="cv-right">Febrero 2024</div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Habilidades Técnicas</h2>
+    
+
+      <div class="cv-skill-grid">
+        <div class="cv-skill-col">
+          <span class="cv-strong">Frontend:</span>
+          <span> Next.js, React, Angular, TypeScript, Tailwind CSS.</span>
         </div>
 
+        <div class="cv-skill-col">
+          <span class="cv-strong">Backend:</span>
+          <span> Django, Node.js, Spring Boot, PHP, APIs REST.</span>
+        </div>
+
+        <div class="cv-skill-col">
+          <span class="cv-strong">Herramientas:</span>
+          <span> Docker, Nginx, AWS, PostgreSQL, MySQL, Redis, Linux.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiencia profesional -->
+    <section class="cv-section">
+      <h2 class="cv-section-title">Experiencia profesional</h2>
    
 
-    <main class="w-full max-w-[900px] mx-auto bg-white shadow-md 
-            p-6 sm:p-8 md:p-10 
-            mt-6 md:mt-10 mb-10 md:mb-16">
+      <p class="cv-paragraph">
+        Matemático y Full Stack Developer con experiencia desarrollando plataformas web empresariales, sistemas
+        administrativos y soluciones SaaS escalables. Especializado en arquitecturas modernas con Next.js y Django,
+        despliegue en VPS y AWS, y diseño de sistemas orientados a optimizar procesos de negocio.
+      </p>
 
+      <p class="cv-paragraph">
+        Experiencia liderando proyectos end-to-end desde análisis de requerimientos hasta producción en sectores
+        financiero, energético, asegurador y social.
+      </p>
 
+      <!-- Smart Evolution -->
+      <div class="cv-exp-block">
+        <div class="cv-row">
+          <div class="cv-left cv-strong">Smart Evolution S.A.</div>
+          <div class="cv-right">Colombia</div>
+        </div>
 
-        <!-- HEADER -->
-<header class="text-center mb-10">
-  <h1 class="text-3xl font-serif font-bold tracking-wide">Luis Molina</h1>
-  <p class="text-gray-700 mt-1">
-      luisjose0317&#64;gmail.com • (57) 301-289-2924 • Rionegro, Antioquia
-  </p>
-</header>
+        <div class="cv-row cv-row-tight">
+          <div class="cv-left">Full Stack Developer</div>
+          <div class="cv-right">Oct 2024 – Presente</div>
+        </div>
 
+        <ul class="cv-bullets">
+          <li><span class="cv-strong">Líder de desarrollo</span> de la plataforma financiera de factoring de la compañía.</li>
+          <li>Diseño e implementación de APIs robustas con <span class="cv-strong">Django</span> y <span class="cv-strong">MySQL</span>.</li>
+          <li>Desarrollo de interfaces de usuario modernas utilizando <span class="cv-strong">Next.js</span> y <span class="cv-strong">Material UI</span>.</li>
+          <li>Optimización continua del rendimiento y estabilidad mediante despliegues en la nube con <span class="cv-strong">Docker</span> y <span class="cv-strong">AWS</span>.</li>
+        </ul>
+      </div>
 
-        <!-- SECTION TITLE -->
-        <h2 class="text-xl font-semibold border-b pb-1 mb-4">Education</h2>
+      <!-- ISA -->
+      <div class="cv-exp-block">
+        <div class="cv-row">
+          <div class="cv-left cv-strong">ISA Intercolombia</div>
+          <div class="cv-right">Medellín - Colombia</div>
+        </div>
 
-        <!-- EDUCATION -->
-        <section class="space-y-6">
+        <div class="cv-row cv-row-tight">
+          <div class="cv-left">Analista TI</div>
+          <div class="cv-right">Ene 2023 – Jul 2023</div>
+        </div>
 
-            <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">Universidad de Antioquia</h3>
-                    <span class="text-gray-600">Feb 2024</span>
-                </div>
-                <p class="italic text-gray-700">Matemáticas</p>
-                <ul class="list-disc ml-6 text-gray-700">
-                    <li>GPA: 4.0</li>
-                    <li>Dean’s Honor List</li>
-                    <li>Capstone: AI-based Data Analysis Platform</li>
-                </ul>
-            </div>
+        <ul class="cv-bullets">
+          <li>Mantenimiento e integración de aplicaciones web internas y optimización de bases de datos SQL.</li>
+          <li>Desarrollo de un modelo predictivo basado en <span class="cv-strong">XGBoost</span> para anticipar fallos en infraestructura crítica, mejorando el diagnóstico de activos.</li>
+          <li>Aseguré la integridad y consistencia de datos críticos empresariales.</li>
+        </ul>
+      </div>
+    </section>
 
-           
+    <!-- Página 2 (Proyectos + Idiomas) -->
+    <section class="cv-section cv-pagebreak">
+      <h2 class="cv-section-title cv-left-title">Proyectos destacados</h2>
 
-        </section>
+      <ul class="cv-bullets cv-bullets-wide">
+        <li><span class="cv-strong">GoAISO:</span> Desarrollo integral del MVP de una plataforma SaaS para el análisis de posicionamiento en IA, validado exitosamente ante inversionistas.</li>
+        <li><span class="cv-strong">Fundación Aladinas:</span> Automatización del sistema de gestión de donaciones, logrando una <span class="cv-strong">reducción del 60% en los tiempos operativos</span>.</li>
+        <li><span class="cv-strong">AlpeSeguros:</span> Implementación de un ecosistema de administración de seguros que redujo en un <span class="cv-strong">45% los errores manuales</span> de gestión.</li>
+        <li><span class="cv-strong">Global Oil:</span> Creación de una plataforma de trazabilidad industrial para muestras de aceite utilizando <span class="cv-strong">Next.js</span> y <span class="cv-strong">PostgreSQL</span>.</li>
+      </ul>
 
-        <!-- TECHNICAL SKILLS -->
-        <h2 class="text-xl font-semibold border-b pb-1 mt-10 mb-4">Technical Skills</h2>
+      <h2 class="cv-section-title">Idiomas</h2>
+     
 
-        <section class="grid sm:grid-cols-2 gap-y-4 text-gray-700 text-sm">
-            <ul class="list-disc ml-6">
-                <li>Python / Scikit-learn</li>
-                <li>Machine Learning</li>
-                <li>SQL / PostgreSQL</li>
-                <li>Javascript</li>
-            </ul>
-            <ul class="list-disc ml-6">
-                <li>Java</li>
-                <li>SpringBoot</li>
-                <li>Deployment</li>
-                <li>Web Development</li>
-            </ul>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <h2 class="text-xl font-semibold border-b pb-1 mt-10 mb-4">Professional Experience</h2>
-
-        <section class="space-y-8 text-gray-700">
-
-            <!-- JOB 1 -->
-            <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">ISA Intercolombia</h3>
-                    <span>2021 – Present</span>
-                </div>
-
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Led a team of 5 developers to deliver scalable software solutions.</li>
-                    <li>Automated internal processes, reducing manual work by 40%.</li>
-                    <li>Developed data pipelines for analytics and BI systems.</li>
-                </ul>
-            </div>
-
-            <!-- JOB 2 -->
-            <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">Smart Evolution</h3>
-                    <span>2018 – 2021</span>
-                </div>
-
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Improved database performance by 20% through tuning.</li>
-                    <li>Implemented monitoring dashboards for operations.</li>
-                    <li>Collaborated with cross-functional teams in Agile environments.</li>
-                </ul>
-            </div>
-
-            
-
-        </section>
-
-
-        <h2 class="text-xl font-semibold border-b pb-1 mt-10 mb-4">Projects</h2>
-
-        <section class="space-y-8 text-gray-700">
-
-            <!-- JOB 1 -->
-            <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">AlpeSeguros</h3>
-                    <span>2021 – Present</span>
-                </div>
-
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Led a team of 5 developers to deliver scalable software solutions.</li>
-                    <li>Automated internal processes, reducing manual work by 40%.</li>
-                    <li>Developed data pipelines for analytics and BI systems.</li>
-                </ul>
-            </div>
-
-            <!-- JOB 2 -->
-            <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">Fundación Aladina</h3>
-                    <span>2018 – 2021</span>
-                </div>
-
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Improved database performance by 20% through tuning.</li>
-                    <li>Implemented monitoring dashboards for operations.</li>
-                    <li>Collaborated with cross-functional teams in Agile environments.</li>
-                </ul>
-            </div>
-
-              <div>
-                <div class="flex justify-between">
-                    <h3 class="font-bold">GlobalOil</h3>
-                    <span>2018 – 2021</span>
-                </div>
-
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Improved database performance by 20% through tuning.</li>
-                    <li>Implemented monitoring dashboards for operations.</li>
-                    <li>Collaborated with cross-functional teams in Agile environments.</li>
-                </ul>
-            </div>
-            
-            
-
-        </section>
-
-    </main>
-    </div>
- 
-
-</body>
-</html>
+      <div class="cv-langs">
+        <div>Inglés: Fluido (B2)</div>
+        <div>Español: Nativo</div>
+      </div>
+    </section>
+  </main>
+</div>
